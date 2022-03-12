@@ -1,5 +1,5 @@
 
-# TITLE
+# Michael's HW Assignment 1
 
 ## Overview and Origin
 
