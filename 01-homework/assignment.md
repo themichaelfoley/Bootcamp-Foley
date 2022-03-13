@@ -1,17 +1,17 @@
 
 # Michael's HW Assignment 1
 
+![stellarphoto.jpg](../../Project_Photos_Git/stellarphoto.jpg)
+
 ## Overview and Origin
 
-* Name of company
+* "The Stellar Development Foundation (SDF) is a non-profit organization whose mission is to create equitable access to the global financial system." (1) and have developed an open source network protocall to facilitate transactions between banks, payment systems, and individuals.(3) The method of payment utilizes their own cryptocurrency tokens called Stellar Lumens (XLM) which acts as the intermediary currency between partners.
 
-* When was the company incorporated?
+* The SDF was founded in 2014 with the Ripple co-founder Jed McCaleb, former lawyer and Ripple CTO Joyce Kim, and in collaboration with the Stripe CEO Patrick Collison. (2)
 
-* Who are the founders of the company?
+* The idea of the Stellar network came about from the desire of the developers to create a "truly open source and decentralized" network (4) that could facilitate inexpensive cross-border payments to anyone. This was acheived through the use of open source code in the Stellar Consensus Protocol and publicly verifiable independent validator nodes.(5)
 
-* How did the idea for the company (or project) come about?
-
-* How is the company funded? How much funding have they received?
+* The SDF has received multiple rounds of funding starting with the initial seed investment of $3 million dollars from Stripe in 2014. Since then they have recieved over $50 million dollars from various companies including Google. (4,6) 
 
 
 ## Business Activities:
@@ -51,3 +51,12 @@ What solution does this company offer that their competitors do not or cannot of
 * What technologies would this additional product or service utilize?
 
 * Why are these technologies appropriate for your solution?
+
+Sources
+
+(1) https://www.stellar.org/foundation/mandate?locale=en
+(2) https://en.wikipedia.org/wiki/Stellar_(payment_network)
+(3) https://youtu.be/MO9QAEuXzo4
+(4) https://medium.datadriveninvestor.com/stellar-explained-e5d28fbec238
+(5) https://stellarbeat.io/
+(6) https://www.crunchbase.com/organization/stellar/company_financials
