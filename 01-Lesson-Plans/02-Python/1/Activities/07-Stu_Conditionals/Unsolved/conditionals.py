@@ -1,4 +1,4 @@
-# 1.
+# 1. Start here
 x = 5
 y = 10
 if 2 * x > 10:

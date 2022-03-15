@@ -1,7 +1,7 @@
 
 # Michael's HW Assignment 1
 
-![stellarphoto.jpg](../../Project_Photos_Git/stellarphoto.jpg)
+![stellarphoto.jpg](stellarphoto.jpg)
 
 ## Overview and Origin
 
