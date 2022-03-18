@@ -25,7 +25,23 @@ bank names associated with the corresponding market cap ranges.
 # Republic Bancorp: .97
 
 # @TODO: Initialize a dictionary of banks and market caps (in billions)
-banks = {
+banks = { 
+    "JPM" : 327,
+    "BoA" : 302,
+    "Citi": 173,
+    "Wells": 273,
+    "Goldman": 87,
+    "Morgan": 72,
+    "USB": 83,
+    "TD": 108,
+    "PNC": 67,
+    "Cap1": 47,
+    "FNB": 4,
+    "FHB": 3,
+    "Ally": 12,
+    "Wachovia": 145,
+    "RepBank": .97,
+
 
 }
 
@@ -44,25 +60,30 @@ banks = {
 
 
 # @TODO: Change the market cap for 'Citigroup'
-
+banks["Citi"]= 200
+print(banks)
 
 # @TODO: Add a new bank and market cap pair
-
+banks["FirstBank"]= 86
+print(banks)
 
 # @TODO: Remove a bank from the dictionary
-
+del banks["Wells"]
+print(banks)
 
 # @TODO: Initialize metric variables
+maxCap= max(banks)
+minCap= min(banks)
 
-
-
+print(f"Bank with Highest market capitalization is : {maxCap}")
+print(f"Bank with Lowest market capitalization is : {minCap}")
 
 # @TODO: Initialize minimum key-value pair
-
+min(banks)
 
 
 # @TODO: Initialize maximum key-value pair
-
+max(banks)
 
 
 

@@ -5,7 +5,7 @@
 
 ## Overview and Origin
 
-* "[The Stellar Development Foundation](https://stellar.org/blog/building-speedex-a-novel-design-for-decentralized-exchanges?__hstc=17958374.2913812936ef96c84aa04ba0c2ce92f3.1637013292108.1637013292108.1637615841029.2&__hssc=17958374.1.1637615841029&__hsfp=56192259) (SDF) is a non-profit organization whose mission is to create equitable access to the global financial system." (1) and have developed an open source network protocall to facilitate transactions between banks, payment systems, and individuals.(3) The method of payment utilizes their own cryptocurrency tokens called Stellar Lumens (XLM) which acts as the intermediary currency between partners.
+* "[The Stellar Development Foundation](https://www.stellar.org/) (SDF) is a non-profit organization whose mission is to create equitable access to the global financial system." (1) and have developed an open source network protocall to facilitate transactions between banks, payment systems, and individuals.(3) The method of payment utilizes their own cryptocurrency tokens called Stellar Lumens (XLM) which acts as the intermediary currency between partners.
 
 * The SDF was founded in 2014 with the Ripple co-founder Jed McCaleb, former lawyer and Ripple CTO Joyce Kim, and in collaboration with the Stripe CEO Patrick Collison.(2)
 
