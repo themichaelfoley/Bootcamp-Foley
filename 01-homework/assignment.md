@@ -11,7 +11,7 @@
 
 * The idea of the Stellar network came about from the desire of the developers to create a "truly open source and decentralized" network (4) that could facilitate inexpensive cross-border payments to anyone. This was acheived through the use of open source code in the Stellar Consensus Protocol and publicly verifiable independent [validator nodes](https://stellarbeat.io/).(5)
 
-* The SDF has received multiple rounds of funding starting with the initial seed investment of $3 million dollars from Stripe in 2014. Since then they have recieved over $50 million dollars from various companies including Google (4,6) and the remainder of their funding comes from the strategic sale of Lumens tokens which were created at the network's inception. (1)
+* The SDF has received multiple rounds of funding starting with the initial seed investment of $3 million dollars from Stripe in 2014. Since then they have recieved over $50 million dollars from various companies including Google (4,6) and the remainder of their funding comes from the strategic sale of Lumens tokens which were created at the network's inception.(1)
 
 
 ## Business Activities:
