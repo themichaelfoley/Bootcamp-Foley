@@ -13,7 +13,7 @@ from pathlib import Path
 import csv
 
 # Set the file path
-csvpath = Path('../Resources/accounting.csv')
+csvpath = Path('Bootcamp-Foley\01-Lesson-Plans\02-Python\3\Activities\09-Ins_CSV_Reader\Resources\accounting.csv')
 
 # Initialize variable to hold salaries
 salaries = []
@@ -64,11 +64,13 @@ for salary in salaries:
     count_salary += 1
 
     # Logic to determine min and max salaries
+    #THIS IS NOT CORRECT the code loop with stop with the first elif -solution is sepparate last elif and change to if
     if min_salary == 0:
         min_salary = salary
     elif salary > max_salary:
         max_salary = salary
-    elif salary < min_salary:
+    
+    if salary < min_salary:
         min_salary = salary
 
 # Calculate the average salary, round to the nearest 2 decimal places
@@ -83,7 +85,7 @@ header = ["Max_Salary", "Min_Salary", "Avg_Salary"]
 metrics = [max_salary, min_salary, avg_salary]
 
 # Set the output file path
-output_path = Path('output.csv')
+output_path = Path('Bootcamp-Foley\01-Lesson-Plans\02-Python\3\Activities\09-Ins_CSV_Reader\Solved')
 
 # Open the output path as a file object
 with open(output_path, 'w') as csvfile:

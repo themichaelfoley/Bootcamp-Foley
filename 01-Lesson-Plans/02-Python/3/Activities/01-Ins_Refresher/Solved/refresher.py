@@ -60,6 +60,9 @@ for x in range(5):
       "04-06-2019": -311
   }
 
+for k,v in trading_pnl.items():
+  print(f"key is {k}, value is {v}")
+
 # Traverse/access nested objects
 # List of Dicts
 ceo_nested_dict = [
@@ -85,5 +88,5 @@ ceo_nested_dict = [
 def main(stock_ticker):
   print(stock_ticker + " is booming right now!")
 
-stock_ticker = "SBUX"
-main(stock_ticker)
+stock_ticker_arg = "SBUX"
+main(stock_ticker_arg)
