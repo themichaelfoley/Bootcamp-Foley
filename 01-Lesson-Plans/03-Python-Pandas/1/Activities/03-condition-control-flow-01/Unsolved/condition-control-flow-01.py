@@ -9,21 +9,22 @@
 
 
 # Declare a variable named 'dog' with a string of "Spot".
-
+dog = "Spot"
 # Declare 3 variables `cat`, `city`, `car` without assigning them values.
-
-
+cat = ''
+city = ''
+car = ''
 # Assign the string "Farley" to `cat`.
-
+cat = "Farley"
 
 # Assign the string "San Francisco" to `city`.
-
+city = "San Francisco"
 
 # Assign the string "Prius" to `car`.
-
+car = "Prius"
 
 # Using string concatenation, print out the sentence "See Spot run!".
-
+print(f"See {dog} run!")
 
 # Using string concatenation, print out the sentence "I drive Farley around San Francisco in my Prius".
 

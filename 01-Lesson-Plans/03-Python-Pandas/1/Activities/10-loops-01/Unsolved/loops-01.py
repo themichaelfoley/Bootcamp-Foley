@@ -1,15 +1,17 @@
 # Declare an empty list named `our_list`.
-
+our_list = [1,3,4,5]
 
 # Use the `append` list function to append the number 1 into `our_list`.
 
-
+print(our_list)
+our_list.append(1)
+print(f"Our List: {our_list}")
 # Append the string "hello" into `our_list`.
-
-
+our_list.append("hello")
+print(our_list)
 # Append the boolean False into `our_list`.
-
-
+our_list.append(False)
+print(type(our_list[-2]))
 # Append the number 84 into `our_list`.
 
 
