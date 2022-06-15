@@ -168,6 +168,29 @@ def convert_usd(intent_request):
         # Once all slots are valid, a delegate dialog is returned to Lex to choose the next course of action.
         return delegate(output_session_attributes, get_slots(intent_request))
 
+    """
+    ADDED CODE
+    """  
+        
+    slots = get_slots(intent_request)
+        
+    validation_result = validate_data(birthday, usd_amount, intent_request) # this should validate birthday for chat this time....
+    
+    if not validation_result["isValid"]:
+        slots[validation_result["violatedSlot"]] = None  # Cleans invalid slot
+
+        # Returns an elicitSlot dialog to request new data for the invalid slot
+        return elicit_slot(
+        intent_request["sessionAttributes"],
+        intent_request["currentIntent"]["name"],
+        slots,
+        validation_result["violatedSlot"],
+        validation_result["message"],
+     )
+
+    """
+    END ADDED CODE
+    """  
     # Get the current price of BTC in USD and make the conversion from USD to BTC.
     btc_value = parse_float(usd_amount) / get_btcprice()
     btc_value = round(btc_value, 6)
