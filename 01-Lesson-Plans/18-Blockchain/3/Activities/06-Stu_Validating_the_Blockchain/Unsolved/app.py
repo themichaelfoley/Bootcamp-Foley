@@ -20,6 +20,7 @@ class Block:
     data: Any
     creator_id: int
     timestamp: str = datetime.datetime.utcnow().strftime("%H:%M:%S")
+    current_hash: str = "0"
     prev_hash: str = "0"
     nonce: int = 0
 
@@ -41,7 +42,9 @@ class Block:
         nonce = str(self.nonce).encode()
         sha.update(nonce)
 
-        return sha.hexdigest()
+        self.current_hash = sha.hexdigest()
+        #return sha.hexdigest()
+        return self.current_hash
 
 ################################################################################
 
@@ -81,6 +84,7 @@ class PyChain:
         # Set the hash equal to a variable called block_hash
         # Hint - The first block in the chain is at index position 0.
         # YOUR CODE HERE
+        block_hash = self.chain[0].hash_block()
 
         # @TODO:
         # Create a for-loop to access the remainder of the blocks in the
@@ -94,12 +98,17 @@ class PyChain:
             # If the two hashes are NOT equal, print a statement that says
             # "Blockchain is invalid", and then return the value False
             # YOUR CODE HERE
+        for block in self.chain[1:]:
+            if block_hash != block.prev_hash:
+                print("Blockchain is invalid!")
+                return False
 
 
             # @TODO:
             # Set the block_hash value equal to the hashed value of the current
             # block
             # YOUR CODE HERE
+            block_hash = block.hash_block()
 
 
         print("Blockchain is Valid")
@@ -127,7 +136,7 @@ input_data = st.text_input("Block Data")
 
 ################################################################################
 
-difficulty = st.sidebar.slider("Block Difficulty", 1, 5, 4)
+difficulty = st.slider("Block Difficulty", 1, 5, 4)
 
 pychain.difficulty = difficulty
 
@@ -153,7 +162,8 @@ st.write(pychain_df)
 # @TODO:
 # Add a button with the text “Validate Blockchain” to your Streamlit interface.
 # YOUR CODE HERE
-
+if st.button("Validate Blockchain"):
+    
 # Step 3:
 # Code the Validate Blockchain button so that when it’s clicked, it calls
 # the `is_valid` method of the `PyChain` data class and then writes the
@@ -163,6 +173,7 @@ st.write(pychain_df)
 # Call the `is_valid` method of the `PyChain` data class and `write` the
 # result to the Streamlit interface
 # YOUR CODE HERE
+    st.write(pychain.is_valid())
 
 ################################################################################
 # Step 4:
