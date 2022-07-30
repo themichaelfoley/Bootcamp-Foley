@@ -16,7 +16,7 @@ w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
 def generate_account():
     """Create a digital wallet and Ethereum account from a mnemonic seed phrase."""
     # Fetch mnemonic from environment variable.
-    mnemonic = os.getenv("MNEMONIC" 
+    mnemonic = os.getenv("MNEMONIC") 
     # Create Wallet Object
     wallet = Wallet(mnemonic)
     # Derive Ethereum Private Key
