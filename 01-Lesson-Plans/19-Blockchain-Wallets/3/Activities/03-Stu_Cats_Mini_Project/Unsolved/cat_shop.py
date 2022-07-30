@@ -13,7 +13,7 @@ from typing import Any, List
 
 
 # @TODO: # From crypto_wallet.py import w3, generate_account, get_balance
-
+from crypto_wallet import *
 
 ################################################################################
 # Cat Information
@@ -37,7 +37,9 @@ def get_cats():
 # Create a for loop through the cat_database use `db_list to produce the results`
     for number in range(len(kitties)):
   # @TODO Use `st.write` to add the objects from the object to the code (hint price and name)
+st.write(f"Name :{}"
 
+)
 ################################################################################
 # Streamlit Code
 
