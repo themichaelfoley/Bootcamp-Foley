@@ -19,3 +19,5 @@ contract PersonalSavings {
   address payable private_savings = 0x873Ad450656C46cb564eaf418472A1c77d7327Ad;
   string account_holder = "Jane Doe";
 }
+
+ function() external payable {}

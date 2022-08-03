@@ -1,5 +1,4 @@
 /*
-
 Implement Ether Management Functions
 ------------------------------------
 In this activity, you’ll extend the `CustomerAccount` contract that you created earlier by implementing functions that will allow you to send remittances and deposit ether.
@@ -34,7 +33,7 @@ contract’s ether balance with each deposit or withdrawal.
 
 7. Compile your smart contract. If an error occurs, review your code, and make the necessary changes for a successful compilation.
 
-*/
+
 
 
 pragma solidity ^0.5.0;
@@ -57,4 +56,38 @@ contract CustomerAccount {
         customerName = newCustomerName;
         customerLastName = newCustomerLastName;
     }
+}
+*/
+pragma solidity ^0.5.0;
+
+contract CustomerAccount {
+
+    /* Declare Member Variables */
+    address owner;
+    bool isNewAccount;
+    string customerName;
+    string customerLastName;
+
+    function sendRemittance(uint amount, address payable recipient) public{
+        recipient.transfer(amount);
+    }
+
+    function balance() public view returns(uint){
+        return address(this).balance;
+    }
+
+    function getInfo() view public returns(address, bool, string memory, string memory) {
+        return (owner, isNewAccount, customerName, customerLastName);
+    }
+
+    function setInfo(address newOwner, bool newAccountStatus, string memory newCustomerName, string memory newCustomerLastName) public {
+        owner = newOwner;
+        isNewAccount = newAccountStatus;
+        customerName = newCustomerName;
+        customerLastName = newCustomerLastName;
+    }
+
+    function deposit() public payable {}
+
+    function() external payable {}
 }

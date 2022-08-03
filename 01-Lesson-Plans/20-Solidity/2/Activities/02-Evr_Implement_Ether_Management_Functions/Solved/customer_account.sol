@@ -1,5 +1,5 @@
 /*
-
+*/
 Implement Ether Management Functions
 ------------------------------------
 In this activity, you’ll extend the `CustomerAccount` contract that you created earlier by implementing functions that will allow you to send remittances and deposit ether.

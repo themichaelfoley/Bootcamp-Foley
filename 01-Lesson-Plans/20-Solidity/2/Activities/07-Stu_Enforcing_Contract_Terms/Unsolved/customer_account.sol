@@ -53,3 +53,34 @@ contract CustomerAccount {
 
     function() external payable {}
 }
+
+
+pragma solidity ^0.5.0;
+
+contract CustomerAccount {
+    address payable public owner = msg.sender;
+    string customerName ="John";
+    string customerLastName ="Smith";
+
+    modifier onlyOwner{
+        require(msg.sender == owner, "ONLY OWNER CAN DO THIS");
+        _;
+    }
+
+    function changeOwner(address payable newOwner) public onlyOwner {
+        owner = newOwner;
+    }
+
+    function sendRemittance(uint amount, address payable recipient) public onlyOwner {
+        //require(recipient == owner || recipient == authorizedRecipient, "The recipient address is not authorized!");
+        recipient.transfer(amount);
+    }
+
+    function deposit() public payable {}
+
+    function() external payable {}
+
+    function balance() public view returns(uint){
+        return address(this).balance;
+    }
+}

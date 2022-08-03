@@ -43,6 +43,20 @@ Instructions
 
 pragma solidity ^0.5.0;
 
-contract TradeController {
-// insert code here
+contract TradeController{
+    uint public previousPrice;
+    string public tradeType;
+
+    function makeTrade(uint currentPrice, bool buyAnyway) public {
+        // && is and, || is or
+        if (currentPrice < previousPrice || buyAnyway){
+            tradeType = "Buy";
+            previousPrice = currentPrice;
+        } else if (currentPrice > previousPrice) {
+            tradeType = "Sell";
+            previousPrice = currentPrice;
+        } else{
+            tradeType = "Hold";
+        }
+    }
 }

@@ -1,4 +1,5 @@
 /*
+*/
 1. Use the `latest_trade.sol` file to create a contract named `LatestTrade` that contains:
 
     * A string variable `coin` with the value `XRP` assigned to it.
@@ -24,3 +25,16 @@
       contract.
 
 */
+contract LatestTrade {
+  string coin = "XRP";
+  uint price;
+  bool is_buy_order;
+
+  function updateTrade(string memory newCoin, uint256 newPrice, bool is_buy) {
+        coin = newCoin;
+        price = newPrice;
+        is_buy_order = is_buy; 
+    }
+
+  function getTrade() public returns
+}
