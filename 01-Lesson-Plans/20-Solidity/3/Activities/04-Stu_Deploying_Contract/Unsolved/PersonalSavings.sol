@@ -78,3 +78,40 @@ contract PersonalSavings {
   function() external payable {
   }
 }
+
+// Dan's Option
+pragma solidity ^0.5.0;
+
+contract PersonalSavings {
+  address public public_savings = msg.sender;
+  address private_savings;
+  address last_to_transfer;
+  string account_holder = "Jane Doe";
+
+  function setPrivateOwner(address payable newPrivate) public {
+      require(msg.sender == public_savings || msg.sender == private_savings, "UNAUTH");
+      private_savings = newPrivate;
+  }
+
+  function lastSender() external view returns(address) {
+      require(msg.sender == public_savings || msg.sender == private_savings, "UNAUTH");
+      return last_to_transfer;
+  }
+
+  function transfer(uint amount, address payable recipient) public {
+      require(msg.sender == public_savings || msg.sender == private_savings, "UNAUTH");
+      require(address(this).balance >= amount, "NOT ENOUGH FUNDS");
+      last_to_transfer = msg.sender;
+      return recipient.transfer(amount);
+  }
+
+  function deposit() public payable {
+  }
+
+  function() external payable {
+  }
+
+  function balance() external view returns(uint) {
+      return address(this).balance;
+  }
+}

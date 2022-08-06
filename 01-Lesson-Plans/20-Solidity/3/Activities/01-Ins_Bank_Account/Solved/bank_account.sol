@@ -12,3 +12,24 @@ contract BankAccount {
 
     function() external payable {}
 }
+
+
+//Dan's version
+pragma solidity ^0.5.0;
+
+contract BankAccount {
+
+    address payable public accountOwner = msg.sender; // whoever launched this contract
+
+    function withdraw(uint amount, address payable recipient) public{
+        require(msg.sender == accountOwner, "YOU SHALL NOT PASS");
+        return recipient.transfer(amount);
+    }
+
+    function deposit() public payable {}
+    function () external payable {}
+
+    function balance() external view returns (uint) {
+        return address(this).balance;
+    }
+}
